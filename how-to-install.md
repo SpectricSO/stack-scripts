@@ -1,6 +1,6 @@
 # How do I install a script in this repository?
 
-Anyone who has tried to paste a script directly into the console will notice that it will raise an error or likely not work.
+Anyone who has tried to paste a script in this repository directly into the console will notice that it will raise an error or likely not work.
 
 All userscripts in this repository require either Tampermonkey (Chrome, Safari+) or Greasemonkey (Firefox) These are known as userscript managers. You can install them here:
 
