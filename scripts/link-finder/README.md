@@ -6,8 +6,7 @@ Link Finder is a JavaScript userscript that enables users to copy direct links f
 
 ## How do I use it?
 
-Once you have installed the script (see **Installation** below), go to [Stack Overflow](https://www.stackoverflow.com). If your browser supports the extension, you should see a link icon
- when you hover over comments, and beside answers. For example:
+Once you have installed the script (see **Installation** below), go to [Stack Overflow](https://www.stackoverflow.com). If your browser supports the extension, you should see a link icon when you hover over comments. You should also see a link icon beside answers. For example:
 
 Answer:
 
