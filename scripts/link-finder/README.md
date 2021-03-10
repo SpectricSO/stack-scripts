@@ -16,7 +16,7 @@ Comment:
 
 ![Spectric Link Finder - How to use - Comment example](https://user-images.githubusercontent.com/79671525/109595149-f31e1f80-7ae1-11eb-852b-110f2d268fbc.png)
 
-Click on the icon. If it turns into a checkmark, then the code was successfully copied to your clipboard.
+Click on the icon. If it turns into a checkmark, then the link was successfully copied to your clipboard.
 
 ## License
 
