@@ -67,23 +67,35 @@ $(window).on('load', function(){
 	}
 	function setup(){
 		var modal = $('.spectric-block-interactions-modal .spectric-block-interactions-user-list');
-
-		for(let i = 0; i < blockedUsers.length; i++){
-			var user = document.createElement("p");
-			user.setAttribute("class", "spectric-block-interactions-user");
-			user.innerText = blockedUsers[i];
-			user.innerHTML += '<span class="material-icons">delete</span>';
-			modal.append(user);
+		checkEmpty();
+			for(let i = 0; i < blockedUsers.length; i++){
+				var user = document.createElement("p");
+				user.setAttribute("class", "spectric-block-interactions-user");
+				user.innerText = blockedUsers[i];
+				user.innerHTML += '<span class="material-icons" onclick="$(this).parent().remove();checkEmpty();">delete</span>';
+				modal.append(user);
+			}
+		function checkEmpty(){
+			if($('.user', modal).length == 0){
+				modal.html("<p id='spectric-block-interactions-empty-user-list-warning' style='color:#bfbfbf;text-align:center;'>You have not blocked interactions with any users yet</p>");
+			}
 		}
 		jQuery(document).on('keydown', '.spectric-block-interactions-modal input', function(ev) {
 		    if(ev.key === 'Enter') {
 		    	var username = ev.target.value;
-		    	var user = document.createElement("p");
-				user.setAttribute("class", "spectric-block-interactions-user");
-				user.innerText = username;
-				user.innerHTML += '<span class="material-icons">delete</span>';
-				modal.append(user);
-				ev.target.value = "";
+		    	if(username != null && username.length > 0){
+		    		$('#spectric-block-interactions-empty-user-list-warning').hide();
+		    		var user = document.createElement("p");
+					user.setAttribute("class", "spectric-block-interactions-user");
+					user.innerText = username;
+					user.innerHTML += '<span class="material-icons">delete</span>';
+					modal.append(user);
+					$('.material-icons', user).on('click', function(){
+						$(this).parent().remove();
+						checkEmpty();
+					})
+					ev.target.value = "";
+		    	}
 		        return false;
 		    }
 		});
@@ -131,9 +143,6 @@ $(window).on('load', function(){
 		$('.spectric-block-interactions-save').on('click', function(){
 			save();
 		})
-		$('.spectric-block-interactions-user .material-icons').on('click', function(){
-			$(this).parent().remove();
-		})
 		var alert = $('.spectric-block-interactions-alert');
 		var prevTimeout;
 		function showAlert(){
@@ -157,7 +166,6 @@ $(window).on('load', function(){
 			alert.text('Successfully updated blocked users. Reload for changes to be put into effect.');
 			setTimeout(function(){alert.css('bottom', '-50px');}, 2000);
 		}
-
 	}
 	install();
 	setup();
