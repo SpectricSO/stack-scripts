@@ -140,7 +140,7 @@ $(window).on('load', function(){
 		document.onkeydown = searchForShortcut;
         function searchForShortcut(evt){
           if (!evt) evt = event;
-          if (evt.ctrlKey && evt.shiftKey && evt.keyCode==69){
+          if (evt.ctrlKey && evt.shiftKey && evt.keyCode==13){
             $('.spectric-block-interactions-modal').fadeToggle();
           }
         }
