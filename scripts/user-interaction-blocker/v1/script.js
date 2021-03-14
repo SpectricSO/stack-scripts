@@ -67,16 +67,20 @@ $(window).on('load', function(){
 	}
 	function setup(){
 		var modal = $('.spectric-block-interactions-modal .spectric-block-interactions-user-list');
-		checkEmpty();
 			for(let i = 0; i < blockedUsers.length; i++){
 				var user = document.createElement("p");
 				user.setAttribute("class", "spectric-block-interactions-user");
 				user.innerText = blockedUsers[i];
-				user.innerHTML += '<span class="material-icons" onclick="$(this).parent().remove();checkEmpty();">delete</span>';
+				user.innerHTML += '<span class="material-icons">delete</span>';
 				modal.append(user);
+                $('.material-icons', user).on('click', function(){
+                    $(this).parent().remove();
+                    checkEmpty();
+                });
 			}
+        checkEmpty();
 		function checkEmpty(){
-			if($('.user', modal).length == 0){
+			if($('.spectric-block-interactions-user', modal).length == 0){
 				modal.html("<p id='spectric-block-interactions-empty-user-list-warning' style='color:#bfbfbf;text-align:center;'>You have not blocked interactions with any users yet</p>");
 			}
 		}
