@@ -10,7 +10,7 @@ User Interaction Blocker helps prevent accidental voting fraud and other acciden
 
 Once you have installed the script (see **Installation** below), go to [Stack Overflow](https://www.stackoverflow.com).
 
-To add blocked users, enter **Control + Shift + E**. To test that it works, try voting up or down on a blocked user's question or answer. A notice should appear saying "You have disabled user interactions with this user."
+To add blocked users, enter **Control + Shift + Enter**. To test that it works, try voting up or down on a blocked user's question or answer. A notice should appear saying "You have disabled user interactions with this user."
 
 ## License
 
