@@ -1,5 +1,7 @@
 # How do I install a script in this repository?
 
+**Notice:** Downloading the latest version is always most recommended, as previous versions may contain security issues / bugs. Always use the latest version unless it contains a bug. 
+
 Anyone who has tried to paste a script in this repository directly into the console will notice that it will raise an error or likely not work.
 
 All userscripts in this repository require either Tampermonkey (Chrome, Safari+) or Greasemonkey (Firefox) These are known as userscript managers. You can install them here:
