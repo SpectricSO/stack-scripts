@@ -4,6 +4,8 @@
 
 User Interaction Blocker helps prevent accidental voting fraud and other accidents that could result in a ban when using multiple accounts by disabling interactions between two accounts.
 
+**Known Issue:** Due to the support of duplicate usernames, we all currently adding user id support which will get rid of accidentally blocking other users.
+
 ## How do I use it?
 
 Once you have installed the script (see **Installation** below), go to [Stack Overflow](https://www.stackoverflow.com).
