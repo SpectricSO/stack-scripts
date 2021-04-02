@@ -17,7 +17,7 @@ function sendMessage(message){
 	$('#sayit-button').click();
 }
 function alertGithub(){
-	sendMessage("**Want to make your own joke generator?** Check out the source code on [Gitub](https://github.com/SpectricSO/stack-scripts/blob/main/scripts/chat-joke-generator/script.js)");
+	sendMessage("**Want to make your own joke generator?** Check out the source code on [Github](https://github.com/SpectricSO/stack-scripts/blob/main/scripts/chat-joke-generator/script.js)");
 }
-setInterval(getJoke, 10000);
+setInterval(getJoke, 30000);
 setInterval(alertGithub, 60000);
