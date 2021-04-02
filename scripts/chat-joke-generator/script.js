@@ -1,4 +1,3 @@
-
 function getJoke() {
   var xhttp;
   xhttp=new XMLHttpRequest();
