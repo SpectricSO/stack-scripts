@@ -19,5 +19,5 @@ function sendMessage(message){
 function alertGithub(){
 	sendMessage("**Want to make your own joke generator?** Check out the source code on [Github](https://github.com/SpectricSO/stack-scripts/blob/main/scripts/chat-joke-generator/script.js)");
 }
-setInterval(getJoke, 30000);
+setInterval(getJoke, 20000);
 setInterval(alertGithub, 60000);
