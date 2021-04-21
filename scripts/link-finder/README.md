@@ -2,7 +2,7 @@
 
 ## Link Finder
 
-Link Finder is a JavaScript userscript that enables users to copy direct links for comments and answers easily with a single click without having to dug it up manually themselves.
+Link Finder is a JavaScript userscript that enables users to copy direct links for comments and answers easily with a single click without having to dig it up manually themselves.
 
 ## How do I use it?
 
