@@ -105,7 +105,6 @@
             let stringified = JSON.stringify(preferences);
             localStorage.setItem("stack-focus-preferences", stringified);
             preferences = JSON.parse(stringified);
-            console.log(preferences);
         }
         function logic() {
             var modal = $('.stack-focus');
@@ -117,7 +116,6 @@
             $(document).on('keyup', function (e) {
                 var evt = window.event || e;
                 if (evt.keyCode == 81 && evt.ctrlKey) {
-                    console.log(modal);
                     modal.fadeToggle();
                 }
             })
