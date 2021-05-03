@@ -4,7 +4,15 @@
 // @version      2.0
 // @description  Cool stuff
 // @author       SpectricSO
-// @match        https://stackoverflow.com/*
+// @include      https://*stackoverflow.com/*
+// @include      https://*serverfault.com/*
+// @include      https://*superuser.com/*
+// @include      https://*askubuntu.com/*
+// @include      https://*mathoverflow.net/*
+// @include      https://*.stackexchange.com/*
+// @exclude      https://data.stackexchange.com/*
+// @exclude      https://contests.stackoverflow.com/*
+// @exclude      *chat.*
 // @icon         https://www.google.com/s2/favicons?domain=stackoverflow.com
 // @grant        none
 // ==/UserScript==
