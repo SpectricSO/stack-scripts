@@ -147,7 +147,7 @@
     function updateInputs(){
         var preferences = JSON.parse(localStorage.getItem("darkmode4chats"));
         $('#dark-mode-bg-primary').val(preferences.bgprimary);
-        $('#dark-mode-textprimary').val(preferences.textprimary);
+        $('#dark-mode-text-primary').val(preferences.textprimary);
         $('#dark-mode-outline-primary').val(preferences.outlineprimary);
         $('#dark-mode-text-link').val(preferences.textlink);
         $('#dark-mode-textarea-bg').val(preferences.textareabg);
