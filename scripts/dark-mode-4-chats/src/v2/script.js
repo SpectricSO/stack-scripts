@@ -4,7 +4,7 @@
 // @version      1
 // @description  Dark Mode for Stack Exchange Chats
 // @author       SpectricSO
-// @match        https://chat.stackoverflow.com/*
+// @include      https://chat*.com/rooms*
 // @icon         https://www.google.com/s2/favicons?domain=stackoverflow.com
 // @grant        none
 // ==/UserScript==
