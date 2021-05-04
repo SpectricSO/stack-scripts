@@ -5,6 +5,8 @@
 // @description  Dark Mode for Stack Exchange Chats
 // @author       SpectricSO
 // @include      https://chat*.com/rooms*
+// @include      https://chat*.com/users*
+// @include      https://chat*.com/faq*
 // @icon         https://www.google.com/s2/favicons?domain=stackoverflow.com
 // @grant        none
 // ==/UserScript==
