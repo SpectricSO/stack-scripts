@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dark Mode 4 Chats - Stack Exchange - SpectricSO
 // @namespace    https://github.com/SpectricSO/stack-scripts
-// @version      2
+// @version      1
 // @description  Dark Mode for Stack Exchange Chats
 // @author       SpectricSO
 // @match        https://chat.stackoverflow.com/*
@@ -137,7 +137,14 @@
     }
     .ob-post{
         background-color:var(--outline-primary) !important;
-    }`;
+    }
+    #tabcomplete li {
+        background-color: var(--bg-primary);
+    }
+    .calendar-small {
+        color:black !important;
+    }
+    `;
     $(document.head).append(styles);
     var html = `<style>.dark-mode-settings-modal *{color:#ededed !important;}.dark-mode-settings-modal{background-color:#3d3d3d !important;height: fit-content; width: 600px; position: fixed; left: calc((100% - 600px) / 2); top: 25%; background-color: var(--bg-primary); z-index: 100000; box-shadow: 0 0 3px white; border-radius: 5px; padding: 2em;}.dark-mode-settings-modal .dark-mode-options{margin-top:20px;}.dark-mode-settings-modal .dark-mode-option{display: flex; justify-content: space-between; margin: 10px 0px;}</style><div class="dark-mode-settings-modal"> <h1>Dark Mode for Chats</h1> <h3>By: <a href="https://stackoverflow.com/users/14251221/spectric">Spectric</a></h3> <div class="dark-mode-options"> <div class="dark-mode-option"> <p>Background: </p><input type="color" id="dark-mode-bg-primary"> </div><div class="dark-mode-option"> <p>Text Color (Primary): </p><input type="color" id="dark-mode-text-primary"> </div><div class="dark-mode-option"> <p>Outline Primary: </p><input type="color" id="dark-mode-outline-primary"> </div><div class="dark-mode-option"> <p>Text Color (Link): </p><input type="color" id="dark-mode-text-link"> </div><div class="dark-mode-option"> <p>Textarea Color: </p><input type="color" id="dark-mode-textarea-bg"> </div></div><b id="dark-mode-reset" style="cursor:pointer;text-decoration:underline">[Reset Preferences]</b></div>`;
     $(document.body).append(html);
