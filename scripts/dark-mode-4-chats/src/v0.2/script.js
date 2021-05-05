@@ -4,6 +4,7 @@
 // @version      0.2
 // @description  Dark Mode for Stack Exchange Chats
 // @author       SpectricSO
+// @include      https://chat*.com*
 // @include      https://chat*.com/rooms*
 // @include      https://chat*.com/users*
 // @include      https://chat*.com/faq*
