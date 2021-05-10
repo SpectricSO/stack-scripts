@@ -11,5 +11,7 @@
 
 (function() {
     'use strict';
-     $(document.head).append('<style>*:not(pre){font-family:Arial !important;}</style>');
+     document.body.style.setProperty('--theme-body-font-family', 'Arial');
+     document.body.style.setProperty('--theme-question-body-font-family', 'Arial');
+     document.body.style.setProperty('--theme-question-title-font-family', 'Arial');
 })();
