@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Oaphi/stack-scripts/issues"
   },
-  "homepage": "https://github.com/Oaphi/stack-scripts#readme"
+  "homepage": "https://github.com/Oaphi/stack-scripts#readme",
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  }
 }
