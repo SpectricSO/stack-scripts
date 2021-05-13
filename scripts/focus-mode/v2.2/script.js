@@ -186,25 +186,32 @@
             return (s == "show" ? "hide" : "show");
         }
 
+        /**
+         * @summary updates preferences
+         * @param {string} id
+         */
         function updateStorage(id) {
-            if (id.includes('left_sidebar_findajob')) {
-                preferences.findajob = invert(preferences.findajob);
+            var invertMap = [
+                ["left_sidebar_findajob", "findajob"],
+                ["left_sidebar_teams", "teamsadvert"],
+                ["right_sidebar_oblock", "oblock"],
+                ["right_sidebar_linkedposts", "linked"],
+                ["right_sidebar_relatedposts", "related"],
+                ["right_sidebar_hotnetwork", "hotnetworkq"]
+            ];
+
+            var len = invertMap.length;
+
+            for (var i = 0; i < len; i++) {
+                var pair = invertMap[i];
+                var toCheck = pair[0];
+                var toInvert = pair[1];
+
+                if (!id.includes(toCheck)) continue;
+
+                preferences[toInvert] = invert(preferences[toInvert]);
             }
-            if (id.includes('left_sidebar_teams')) {
-                preferences.teamsadvert = invert(preferences.teamsadvert);
-            }
-            if (id.includes('right_sidebar_oblock')) {
-                preferences.oblock = invert(preferences.oblock);
-            }
-            if (id.includes('right_sidebar_linkedposts')) {
-                preferences.linked = invert(preferences.linked);
-            }
-            if (id.includes('right_sidebar_relatedposts')) {
-                preferences.related = invert(preferences.related);
-            }
-            if (id.includes('right_sidebar_hotnetwork')) {
-                preferences.hotnetworkq = invert(preferences.hotnetworkq);
-            }
+
             let stringified = JSON.stringify(preferences);
             localStorage.setItem("stack-focus-preferences", stringified);
             preferences = JSON.parse(stringified);
