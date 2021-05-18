@@ -1,0 +1,23 @@
+{
+  "name": "stack-scripts",
+  "version": "2.2.0",
+  "description": "A collection of scripts for the Stack Exchange network",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:SpectricSO/stack-scripts.git"
+  },
+  "keywords": [],
+  "author": "Spectric",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SpectricSO/stack-scripts/issues"
+  },
+  "homepage": "https://github.com/SpectricSO/stack-scripts",
+  "devDependencies": {
+    "@types/jquery": "^3.5.5",
+    "typescript": "^4.2.4"
+  }
+}
