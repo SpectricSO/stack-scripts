@@ -49,7 +49,7 @@
                 e.preventDefault();
                 const selectionStart = this.selectionStart;
                 this.value = this.value.substring(0, selectionStart) + ' '.repeat(spaces) + this.value.substring(selectionStart);
-                this.selectionEnd = selectionStart + 4;
+                this.selectionEnd = selectionStart + spaces;
             }
         })
     })
