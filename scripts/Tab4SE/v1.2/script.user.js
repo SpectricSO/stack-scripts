@@ -22,6 +22,8 @@
 // @exclude     *://elections.stackexchange.com/*
 // @exclude     *://openid.stackexchange.com/*
 // @exclude     *://stackexchange.com/*
+// @require https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js 
+
 // @grant        none
 // ==/UserScript==
 
