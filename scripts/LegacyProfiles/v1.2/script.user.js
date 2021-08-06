@@ -30,9 +30,7 @@
         const endpoint = "https://api.stackexchange.com/2.3/users/";
         const params = "?order=desc&site=" + location.host + "&filter=!40D72h-7nG92Z1_td";
         const url = endpoint + userid + params;
-        console.log(url + (apiKEY == null ? '' : "&key=" + apiKEY));
         $.get(url + (apiKEY == null ? '' : "&key=" + apiKEY), function (response) {
-            console.log(response);
             if (response.quota_remaining == 0) {
                 $('#user-card ul').first().append(`<li class="flex--item ow-break-word"><div class="ai-center d-flex gs4 gsx  fc-error">API request limit exceeded.<br>Set up your API Key with (Ctrl + Shift + L)</div></li>`);
             } else if (response.items.length == 0) {
