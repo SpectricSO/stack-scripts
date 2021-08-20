@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Legacy Profiles
 // @namespace    https://github.com/SpectricSO/stack-scripts
-// @version      1.7
+// @version      1.8
 // @description  Cool stuff
 // @author       SpectricSO
 // @match       *://*.askubuntu.com/users/*
