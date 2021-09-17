@@ -20,7 +20,7 @@
 // @exclude     *://openid.stackexchange.com/*
 // @exclude     *://stackexchange.com/*
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
-// @updateURL    https://github.com/SpectricSO/stack-scripts/new/main/scripts/LegacyProfiles/legacyprofiles.latest.user.js
+// @updateURL    https://github.com/SpectricSO/stack-scripts/raw/main/scripts/LegacyProfiles/legacyprofiles.latest.user.js
 // @grant        none
 // ==/UserScript==
 
