@@ -21,7 +21,8 @@
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
 // @updateURL    https://github.com/SpectricSO/stack-scripts/raw/main/scripts/LegacyProfiles/legacyprofiles.latest.user.js
 // @grant        none
-// @version      2.2
+// @version      2.3
+// @history      2.3
 // @history      2.1 to 2.2, trigger update
 // ==/UserScript==
 
@@ -29,7 +30,7 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 (function () {
     'use strict';
     //experimental, use at your own risk
-  alert(2);
+  alert(3);
 })();
 
 /*
