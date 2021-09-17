@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Legacy Profiles
+// @name         Legacy Profiles (Auto Update Version)
 // @namespace    https://github.com/SpectricSO/stack-scripts
 // @version      2.1
 // @description  Cool stuff
