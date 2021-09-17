@@ -28,7 +28,7 @@ this.$ = this.jQuery = jQuery.noConflict(true);
 (function () {
     'use strict';
     //experimental, use at your own risk
-  alert(1);
+  alert(2);
 })();
 
 /*
