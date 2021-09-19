@@ -20,7 +20,7 @@
 // @exclude     *://stackexchange.com/*
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
 // @updateURL    https://github.com/SpectricSO/stack-scripts/raw/main/scripts/LegacyProfiles/legacyprofiles.latest.min.user.js
-// @version      2.1
+// @version      1.0
 // @grant        none
 // ==/UserScript==
 
