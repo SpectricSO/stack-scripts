@@ -11,7 +11,7 @@ All userscripts in this repository require a userscript manager. You can install
 | Browser  | Installation Link |
 | -------- | ----------------- |
 | Chrome  | [Tampermonkey (Chrome Web Store)](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) |
-| Chrome  | [Tampermonkey (Mac App Store)](https://apps.apple.com/app/apple-store/id1482490089) |
+| Safari  | [Tampermonkey (Mac App Store)](https://apps.apple.com/app/apple-store/id1482490089) |
 | Microsoft Edge | [Tampermonkey (Edge Add-ons)](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd) |
 | Firefox  | [Greasemonkey (Firefox ADD-ONS)](https://addons.mozilla.org/firefox/addon/greasemonkey/) |
 
