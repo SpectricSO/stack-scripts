@@ -20,29 +20,45 @@
 // @exclude     *://stackexchange.com/*
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
 // @updateURL    https://github.com/SpectricSO/stack-scripts/raw/main/scripts/LegacyQuestions/latest.user.js
-// @version      1.0
+// @version      1.1
 // @grant        none
 // ==/UserScript==
 
-this.$ = this.jQuery = jQuery.noConflict(true);
 (function () {
-    'use strict';
+    var $ = window.jQuery;
+    function render() {
+        $('.s-post-summary').each(function () {
+            const post = $(this);
+            if (post.attr('data-legacyquestions-rendered') == undefined) {
+                const bounty = post.find('.has-bounty');
+                if (bounty.length) {
+                    const bountyIndicator = $('<div class="bounty-indicator"></div>')
+                    bountyIndicator.text(bounty.text())
+                    bountyIndicator.prependTo($('.s-post-summary--content-title', post))
+                    bounty.remove();
+                }
+                $('.s-post-summary--stats-item', post).each(function () {
+                    const item = $(this);
+                    const text = item.text().trim().split(" ");
+                    const header = $('<div>');
+                    header.text(text[0]).addClass("mini-counts");
+                    item.empty();
+                    item.append(header, text[1]);
+                })
+
+            }
+            post.attr('data-legacyquestions-rendered', true);
+        })
+    }
     $(document).ready(function () {
         const styles = `<style>.s-post-summary--stats{flex-direction:row;flex-wrap:nowrap;width:unset;align-items:flex-start}.s-post-summary--stats-item{height:100%}.mini-counts{font-size:1.30769231rem;line-height:1;margin-bottom:4px}.s-post-summary--stats-item{display:inline-block;margin:0 3px 0 0;min-width:44px;height:auto;font-size:11px;padding:6px;border:1px solid transparent;border-radius:3px;text-align:center;color:var(--fc-light)}.s-post-summary--stats-item.has-answers{padding:6px!important}.is-watched{display:none}</style>`
         $(document.head).append(styles);
-    })
-    $('.is-watched').remove();
-    $('.s-post-summary').each(function () {
-        const t = $(this);
-        $('.s-post-summary--stats-item', t).each(function () {
-            const t = $(this);
-            const text = t.text().trim().split(" ");
-            const header = $('<div>');
-            header.text(text[0]).addClass("mini-counts");
-            t.empty();
-            t.append(header, text[1]);
+        render();
+        $(document).ajaxComplete(function (event, xhr, settings) {
+            if (settings.url == '/posts/ajax-load-realtime-list/') {
+                render();
+            }
         })
-        $('.s-post-summary--stats-item', t).eq(1).prependTo(t);
     })
 })();
 
