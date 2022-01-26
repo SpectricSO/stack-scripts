@@ -3,13 +3,13 @@
 // @namespace    https://github.com/SpectricSO/stack-scripts
 // @description  Cool stuff
 // @author       SpectricSO
-// @match       *://*.askubuntu.com/
-// @match       *://*.mathoverflow.net/
-// @match       *://*.serverfault.com/
-// @match       *://*.stackapps.com/
-// @match       *://*.stackexchange.com/
-// @match       *://*.stackoverflow.com/
-// @match       *://*.superuser.com/
+// @match       *://*.askubuntu.com/*
+// @match       *://*.mathoverflow.net/*
+// @match       *://*.serverfault.com/*
+// @match       *://*.stackapps.com/*
+// @match       *://*.stackexchange.com/*
+// @match       *://*.stackoverflow.com/*
+// @match       *://*.superuser.com/*
 // @exclude     *://api.stackexchange.com/
 // @exclude     *://blog.*.com/
 // @exclude     *://chat.*.com/
@@ -19,7 +19,7 @@
 // @exclude     *://openid.stackexchange.com/*
 // @exclude     *://stackexchange.com/*
 // @updateURL    https://github.com/SpectricSO/stack-scripts/raw/main/scripts/LegacyQuestions/latest.user.js
-// @version      1.2
+// @version      1.2.1
 // @grant        none
 // ==/UserScript==
 
