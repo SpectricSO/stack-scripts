@@ -19,7 +19,7 @@
 // @exclude     *://openid.stackexchange.com/*
 // @exclude     *://stackexchange.com/*
 // @updateURL    https://github.com/SpectricSO/stack-scripts/raw/main/scripts/LegacyQuestions/latest.user.js
-// @version      1.5
+// @version      1.6
 // @grant        none
 // ==/UserScript==
 
@@ -38,7 +38,7 @@
                 }
                 $('.s-post-summary--stats-item', post).each(function () {
                     const item = $(this);
-                    const text = item.text().trim().split(" ");
+                    const text = item.text().trim().split(/(?<=\d)(?!\d)/g);
                     const header = $('<div>');
                     header.text(text[0]).addClass("mini-counts");
                     item.empty();
