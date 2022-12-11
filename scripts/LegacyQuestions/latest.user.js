@@ -19,7 +19,7 @@
 // @exclude     *://openid.stackexchange.com/*
 // @exclude     *://stackexchange.com/*
 // @updateURL    https://github.com/SpectricSO/stack-scripts/raw/main/scripts/LegacyQuestions/latest.user.js
-// @version      1.8
+// @version      1.9
 // @grant        none
 // ==/UserScript==
 
@@ -41,7 +41,12 @@
         })
     }
     $(document).ready(function () {
-        const styles = `<style>.s-post-summary--stats{align-items:flex-start;box-sizing:content-box;display:flex;flex-direction:row;flex-shrink:0;flex-wrap:nowrap;margin-right:0;padding:0 8px 0 0;width:unset}.s-post-summary--stats-item{display:block!important}span.s-post-summary--stats-item-number{display:block;font-size:1.30769231rem;line-height:1;margin-bottom:4px;margin-right:0!important}.s-post-summary{padding-left:8px}.s-post-summary--stats-item{font-size:11px;height:auto;margin:0 3px 0 0;min-width:44px;padding:6px;text-align:center}.s-post-summary--stats-item.has-answers{padding:6px!important}@media (max-width:980px){span.s-post-summary--stats-item-number{display:inline;font-size:12px;font-weight:700;margin-right:3px}.s-post-summary--stats-item{border-radius:3px;box-sizing:border-box;height:auto;line-height:1;margin:0 4px 0 0;min-width:auto;padding:4px 0;text-align:left;width:auto}}.s-post-summary--stats .s-post-summary--stats-item.s-post-summary--stats-item__emphasized{color:var(--fc-light)!important}</style>`
+        const styles = `<style>.has-accepted-answer svg{display:none}.s-post-summary__minimal{flex-direction:row!important}.s-post-summary__minimal .has-accepted-answer{background-color:var(--green-700);border-color:var(--green-700)!important;border-radius:var(--br-sm);color:var(--white)!important}.s-post-summary__minimal .s-post-summary--stats-item.has-answers{display:none!important}.s-post-summary--stats{align-items:flex-start;box-sizing:content-box;display:flex;flex-direction:row;flex-shrink:0;flex-wrap:nowrap;margin-right:0;padding:0 8px 0 0;width:unset}.s-post-summary--stats-item{display:block!important}span.s-post-summary--stats-item-number{display:block;font-size:1.30769231rem;line-height:1;margin-bottom:4px;margin-right:0!important}.s-post-summary{padding-left:8px}.s-post-summary--stats-item{font-size:11px;height:auto;margin:0 3px 0 0;min-width:44px;padding:6px;text-align:center}.s-post-summary--stats-item.has-answers{padding:6px!important}@media (max-width:980px){span.s-post-summary--stats-item-number{display:inline;font-size:12px;font-weight:700;margin-right:3px}.s-post-summary--stats-item{border-radius:3px;box-sizing:border-box;height:auto;line-height:1;margin:0 4px 0 0;min-width:auto;padding:4px 0;text-align:left;width:auto}}.s-post-summary--stats .s-post-summary--stats-item.s-post-summary--stats-item__emphasized{color:var(--fc-light)!important}</style>`
+        $('.s-post-summary__minimal .s-post-summary--stats .s-post-summary--stats-item').each(function(){
+            if($(this).siblings('.has-accepted-answer').length == 1) $(this).addClass('has-accepted-answer')
+
+        })
+        $('.s-post-summary__minimal .s-post-summary--stats-item__emphasized').removeClass('s-post-summary--stats-item__emphasized')
         $(document.head).append(styles);
         render();
         $(document).ajaxComplete(function (event, xhr, settings) {
