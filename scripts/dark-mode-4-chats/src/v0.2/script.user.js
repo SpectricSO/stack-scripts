@@ -141,6 +141,9 @@
     .ob-post{
         background-color:var(--outline-primary) !important;
     }
+    .ob-message{
+        background-color:var(--outline-primary) !important;
+    }
     #tabcomplete li {
         background-color: var(--bg-primary);
     }
